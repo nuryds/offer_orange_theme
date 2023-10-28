@@ -32,7 +32,9 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
           ),
         ],
         backgroundColor: appbarColor,
-        title: const Text("Kabinli Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+        title: Center(
+          child: Text("Kabinli Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          ),
         ),
       ),
       body: const Center(

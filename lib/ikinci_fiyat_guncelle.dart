@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/fiyat_guncelle.dart';
 
@@ -19,7 +20,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
-            Get.to(const FiyatGuncelle());
+            Get.to( FiyatGuncelle());
 
           }, icon: const Icon(Icons.arrow_back,color: Colors.white),
 
@@ -33,15 +34,14 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
           ),
         ],
         backgroundColor: appbarColor,
-        title: const Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+        title: Center(
+          child: Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          ),
         ),
       ),
-      body: const Center(
+      body:Center(
         child: Column(
           children: [
-            Divider(
-
-            ),
 
           ],
         ),

@@ -31,7 +31,9 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
           ),
         ],
         backgroundColor:appbarColor,
-        title: const Text("Normal Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+        title:Center(
+          child: Text("Normal Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          ),
         ),
       ),
       body: const Center(
