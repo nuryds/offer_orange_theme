@@ -19,33 +19,37 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){
-            Get.to( FiyatGuncelle());
-
-          }, icon: const Icon(Icons.arrow_back,color: Colors.white),
+          onPressed: () {
+            Get.to(FiyatGuncelle());
+          }, icon: const Icon(Icons.arrow_back, color: Colors.white),
 
         ),
         actions: [
           IconButton(
-            onPressed:(){
-              Get.to( NormalLedTeklifHesapla());
+            onPressed: () {
+              Get.to(NormalLedTeklifHesapla());
             },
-            icon: const Icon(Icons.exit_to_app,color: Colors.white),
+            icon: const Icon(Icons.exit_to_app, color: Colors.white),
           ),
         ],
         backgroundColor: appbarColor,
         title: Center(
-          child: Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          child: Text("Fiyat Güncelle",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
           ),
         ),
       ),
-      body:Center(
+      body: Center(
         child: Column(
           children: [
-
+            SizedBox(height: 20),
+            CustomTextField(
+              label: "nur",
+              labelTextSize: 13,
+            ),
           ],
         ),
       ),
     );
   }
-}
+  }
