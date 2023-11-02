@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
+import 'package:offer_orange_theme/normal_led_teklif_hesapla.dart';
+
+import 'component/custom_button.dart';
 
 class TeklifHesapla extends StatefulWidget {
   const TeklifHesapla({super.key});
@@ -17,7 +21,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
-            Get.to( IkinciFiyatGuncelle());
+            Get.to( const NormalLedTeklifHesapla());
           }, icon: const Icon(Icons.arrow_back,color: Colors.white),
 
         ),
@@ -33,10 +37,42 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
         title: const Text("Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
         ),
       ),
-      body: const Center(
+      body:Center(
         child: Column(
           children: [
+            SizedBox(height: 100),
+            CustomButton(
+              txtSize: 20,
+              txt: "Normal Led",
+              width: 250,
+              height: 90,
+              onPressed: (){
 
+              },
+              isActive: true,
+            ),
+            SizedBox(height: 50,),
+            CustomButton(
+              txt: "Kabinli Led",
+              txtSize: 20,
+              width: 250,
+              height: 90,
+              onPressed: (){
+
+              },
+              isActive: false,
+            ),
+            SizedBox(height: 50,),
+            CustomButton(
+              txt: "Rental Led",
+              txtSize: 20,
+              width: 250,
+              height: 90,
+              onPressed:(){
+
+              },
+              isActive: false,
+            ),
           ],
         ),
       ),

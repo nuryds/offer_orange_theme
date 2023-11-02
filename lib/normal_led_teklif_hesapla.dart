@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
-import 'package:offer_orange_theme/teklif_hesapla.dart';
 
 class NormalLedTeklifHesapla extends StatefulWidget {
   const NormalLedTeklifHesapla({super.key});
@@ -18,7 +17,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
-            Get.to(const TeklifHesapla());
+            Get.to(const KabinliLedTeklifHesapla());
           }, icon: const Icon(Icons.arrow_back,color: Colors.white),
 
         ),
@@ -31,7 +30,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
           ),
         ],
         backgroundColor:appbarColor,
-        title:Center(
+        title:const Center(
           child: Text("Normal Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
           ),
         ),

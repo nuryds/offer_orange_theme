@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
-      home: FiyatGuncelle(),
+      home: const FiyatGuncelle(),
     );
   }
 }

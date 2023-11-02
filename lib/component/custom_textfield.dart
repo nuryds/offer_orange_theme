@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:offer_orange_theme/constant/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final Function(String)? onChange;
@@ -43,12 +44,13 @@ class CustomTextField extends StatelessWidget {
         this.labelTextSize = 12,
         this.minLines = 1,
         this.maxLines = 3,
-        this.textAlign = TextAlign.start})
+        this.textAlign = TextAlign.start,
+      })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       child: Material(
@@ -58,7 +60,7 @@ class CustomTextField extends StatelessWidget {
         child: TextFormField(
           initialValue: initialValue,
           keyboardType: keyboardType,
-          style: TextStyle(color: textColor, fontWeight: fontWeight, letterSpacing: letterSpacing, fontSize: textSize),
+          style: TextStyle(color:Colors.black, fontWeight: fontWeight, letterSpacing: letterSpacing, fontSize: textSize),
           textAlign: textAlign!,
           minLines: minLines,
           maxLines: maxLines,
@@ -70,35 +72,35 @@ class CustomTextField extends StatelessWidget {
           onChanged: onChange,
           onEditingComplete: onEditingComplete,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             fillColor: Colors.white,
             filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(
-                color: Colors.lightBlue,
+              borderSide: const BorderSide(
+                color: Colors.grey,
               ),
             ),
             border: OutlineInputBorder(
               borderSide: BorderSide(
-                color: validationColor,
+                color:  Colors.grey,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(
-                color: validationColor,
+              borderSide: const BorderSide(
+                color: buttonActiveColor,
               ),
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Colors.grey,
               ),
             ),
             labelStyle: TextStyle(
               fontSize: labelTextSize,
-              color: Colors.blueGrey,
+              color: buttonActiveColor,
               fontWeight: FontWeight.normal,
             ),
             labelText: label,

@@ -35,7 +35,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
           ),
         ],
         backgroundColor: appbarColor,
-        title: Center(
+        title: const Center(
           child: Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
           ),
         ),
@@ -50,7 +50,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
               leading: const Icon(Icons.settings_backup_restore),
               title: const Text("Fiyat Güncelle",style: TextStyle(fontSize: 16,color: Colors.white),),
               onTap: (){
-                Get.to(IkinciFiyatGuncelle());
+                Get.to(const IkinciFiyatGuncelle());
               },
             ),
             const SizedBox(height: 17),
@@ -58,7 +58,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
               leading: const Icon(Icons.calculate_rounded),
               title: const Text("Teklif Hesapla",style: TextStyle(fontSize: 16,color: Colors.white),),
               onTap: (){
-                Get.to(TeklifHesapla());
+                Get.to(const TeklifHesapla());
               },
             ),
             const SizedBox(height: 17),
@@ -66,7 +66,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
               leading: const Icon(Icons.follow_the_signs),
               title: const Text("Müşteri Takip",style: TextStyle(fontSize: 16,color: Colors.white),),
               onTap: (){
-                Get.to(MusteriTakip());
+                Get.to(const MusteriTakip());
               },
             ),
 

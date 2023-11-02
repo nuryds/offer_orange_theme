@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import 'constant/colors.dart';
 // import 'fiyat_guncelle.dart';
@@ -33,7 +31,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
           ),
         ],
         backgroundColor: appbarColor,
-        title: Center(
+        title: const Center(
           child: Text("Müşteri Takip",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
           ),
         ),
