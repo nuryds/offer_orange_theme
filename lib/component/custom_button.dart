@@ -13,6 +13,10 @@ class CustomButton extends StatelessWidget {
     this.txtColor = appbarColor,     // appbar color degişti
     this.activeColor = buttonActiveColor,
     this.passiveColor = buttonPassiveColor,
+    this.borderRadius,
+    this.activebuttonTxtColor,
+    this.passivebuttonTxtColor,
+
 
     required this.onPressed,
     this.paddingSize = 8.0,
@@ -24,11 +28,14 @@ class CustomButton extends StatelessWidget {
   final double width;
   final double height;
   final Color txtColor;
+  final Color? activebuttonTxtColor;   // buton aktifken text rengi eklendi
+  final Color? passivebuttonTxtColor;        // buton pasifken text rengi eklendi
   final Color activeColor;
   final Color passiveColor;
   final GestureTapCallback onPressed;
   final double paddingSize;
   final bool isActive;
+  final BorderRadius? borderRadius ;   //opsiyonel borderradius
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +48,7 @@ class CustomButton extends StatelessWidget {
           width: width,
           decoration: BoxDecoration(
               color: isActive ? activeColor : passiveColor,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: borderRadius ?? BorderRadius.circular(12),
               border: Border.all(width: 1, color: activeColor)),
           child: Center(
               child: Text(

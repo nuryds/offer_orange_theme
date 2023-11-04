@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:offer_orange_theme/component/custom_textfield.dart';
+// import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
 import 'package:offer_orange_theme/normal_led_teklif_hesapla.dart';
@@ -21,7 +21,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
-            Get.to( const NormalLedTeklifHesapla());
+            Get.to( NormalLedTeklifHesapla());
           }, icon: const Icon(Icons.arrow_back,color: Colors.white),
 
         ),

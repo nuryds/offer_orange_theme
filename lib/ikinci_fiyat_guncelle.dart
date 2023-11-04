@@ -46,7 +46,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
         child: Column(
           children: [
             SizedBox(height: 100),
-              MyDivider(),
+              MyDivider(
+                indent: 300,
+                endIndent: 300,
+              ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -65,7 +68,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -84,7 +90,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -103,7 +112,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -122,7 +134,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -141,7 +156,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -160,7 +178,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
             SizedBox(height: 5,),
             Row(
               children: [
@@ -179,7 +200,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               ],
             ),
             SizedBox(height: 5,),
-            MyDivider(),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
 
 
           ],
