@@ -4,15 +4,15 @@ class MyDivider extends StatelessWidget {
   //final double? width ;
   final double? height;    // opsiyonel
   final double? thickness;
-  final double indent;
-  final double endIndent ;
+  final double? indent;
+  final double? endIndent ;
   const MyDivider({
     super.key,
     // this.width,
     this.height,
     this.thickness,
-    required this.indent,
-    required this.endIndent,
+   this.indent,
+    this.endIndent,
   });
 
   @override
