@@ -42,172 +42,170 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
         title:const Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
         ),
       ),
-      body: const Center(
-        child: Column(
-          children: [
-            SizedBox(height: 100),
-              MyDivider(
-                indent: 300,
-                endIndent: 300,
+      body: Column(
+        children: [
+          SizedBox(height: 100),
+            MyDivider(
+              indent: 300,
+              endIndent: 300,
+            ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat",),
               ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat",),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                    icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
                   icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                  icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                  icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                  icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                  icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(width: 330,),
-                Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
-                SizedBox(width: 300,),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
-                  child: CustomTextField(width: 200,label: "Fiyat"),
-                ),
-                SizedBox(width: 10,),
-                IconButton(
-                  onPressed: onPressedrefresh,
-                  icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
-                ),
-              ],
-            ),
-            SizedBox(height: 5,),
-            MyDivider(
-              indent: 300,
-              endIndent: 300,
-            ),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+              SizedBox(width: 300,),
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(width: 200,label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+
+              Text("P 1,86 indoor",style: TextStyle(fontSize: 30),),
+
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: CustomTextField(label: "Fiyat"),
+              ),
+              SizedBox(width: 10,),
+              IconButton(
+                onPressed: onPressedrefresh,
+                icon:Icon(Icons.refresh,size: 35,color: buttonActiveColor,),
+              ),
+            ],
+          ),
+          SizedBox(height: 5,),
+          MyDivider(
+            indent: 300,
+            endIndent: 300,
+          ),
 
 
-          ],
-        ),
+        ],
       ),
     );
   }

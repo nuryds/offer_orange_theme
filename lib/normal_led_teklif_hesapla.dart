@@ -87,7 +87,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
              fallbackWidth: 300,
              color:buttonActiveColor,
            ),
-           SizedBox(width: 300,),
+
            Placeholder(
              fallbackHeight: 150,
              fallbackWidth: 300,
