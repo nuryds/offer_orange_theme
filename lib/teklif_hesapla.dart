@@ -38,42 +38,45 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
         ),
       ),
       body:Center(
-        child: Column(
-          children: [
-            SizedBox(height: 100),
-            CustomButton(
-              txtSize: 20,
-              txt: "Normal Led",
-              width: 250,
-              height: 90,
-              onPressed: (){
+        child: ListView(
+          children:[ Column(
+            children: [
+              SizedBox(height: 100),
+              CustomButton(
+                txtSize: 20,
+                txt: "Normal Led",
+                width: 250,
+                height: 90,
+                onPressed: (){
 
-              },
-              isActive: true,
-            ),
-            SizedBox(height: 50,),
-            CustomButton(
-              txt: "Kabinli Led",
-              txtSize: 20,
-              width: 250,
-              height: 90,
-              onPressed: (){
+                },
+                isActive: true,
+              ),
+              SizedBox(height: 50,),
+              CustomButton(
+                txt: "Kabinli Led",
+                txtSize: 20,
+                width: 250,
+                height: 90,
+                onPressed: (){
 
-              },
-              isActive: false,
-            ),
-            SizedBox(height: 50,),
-            CustomButton(
-              txt: "Rental Led",
-              txtSize: 20,
-              width: 250,
-              height: 90,
-              onPressed:(){
+                },
+                isActive: false,
+              ),
+              SizedBox(height: 50,),
+              CustomButton(
+                txt: "Rental Led",
+                txtSize: 20,
+                width: 250,
+                height: 90,
+                onPressed:(){
 
-              },
-              isActive: false,
-            ),
-          ],
+                },
+                isActive: false,
+              ),
+            ],
+          ),
+      ]
         ),
       ),
     );

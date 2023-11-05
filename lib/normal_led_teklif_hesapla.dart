@@ -52,7 +52,58 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
           ),
         ),
       ),
-      body: Center(
+      body: Column(
+        children: [
+          SizedBox(height: 50,),
+          Expanded(
+              child: ListView(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: MyDivider(
+                          indent: 350,
+                          endIndent: 40,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      ),
+                      Text(" Mekan Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Expanded(
+                        child: MyDivider(
+                          indent: 40,
+                          endIndent: 350,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      )
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      //SizedBox(width: 100,),
+                      Placeholder(
+                        fallbackHeight: 150,
+                        fallbackWidth: 300,
+                        color:buttonActiveColor,
+                      ),
+
+                      Placeholder(
+                        fallbackHeight: 150,
+                        fallbackWidth: 300,
+                        color:buttonActiveColor,
+                      ),
+                    ],
+                  ),
+                ],
+              )
+          ),
+        ],
+      )
+
+      /*Center(
     child: Column(
      children: [
         SizedBox(height: 50),
@@ -329,7 +380,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
        ),
      ]
     )
-      )
+      )*/    //  eski tasarım
     );
   }
 }

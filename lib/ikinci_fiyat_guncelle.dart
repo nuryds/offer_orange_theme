@@ -46,7 +46,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
           children: [
             Expanded(
               child: ListView.separated(
-                  itemCount: 5,
+                  itemCount: 6,
                   itemBuilder: (context, index) {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,7 +79,8 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                     );
                   }, separatorBuilder: (BuildContext context, int index) {
                     return MyDivider() ;
-              },),
+              },
+              ),
             )
           ],
         )

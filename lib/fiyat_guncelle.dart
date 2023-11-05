@@ -74,50 +74,53 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
         ),
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(height: 75),
-            CustomButton(
-              txtSize: 20,
-              txt: "Modüller",
-              width: 250,
-              height: 90,
-              onPressed: (){
+        child: ListView(
+          children:[ Column(
+            children: [
+              const SizedBox(height: 75),
+              CustomButton(
+                txtSize: 20,
+                txt: "Modüller",
+                width: 250,
+                height: 90,
+                onPressed: (){
 
-              },
-              isActive: true,
-            ),
-            CustomButton(
-              txt: "Power Supplies",
-              txtSize: 20,
-              width: 250,
-              height: 90,
-              onPressed: (){
+                },
+                isActive: true,
+              ),
+              CustomButton(
+                txt: "Power Supplies",
+                txtSize: 20,
+                width: 250,
+                height: 90,
+                onPressed: (){
 
-              },
-              isActive: false,
-            ),
-            CustomButton(
-              txt: "Receviers",
-              txtSize: 20,
-              width: 250,
-              height: 90,
-              onPressed:(){
+                },
+                isActive: false,
+              ),
+              CustomButton(
+                txt: "Receviers",
+                txtSize: 20,
+                width: 250,
+                height: 90,
+                onPressed:(){
 
-              },
-              isActive: false,
-            ),
-            CustomButton(
-              txtSize: 20,
-              txt: "Sending-Processors",
-              width: 250,
-              height: 90,
-              onPressed: (){
+                },
+                isActive: false,
+              ),
+              CustomButton(
+                txtSize: 20,
+                txt: "Sending-Processors",
+                width: 250,
+                height: 90,
+                onPressed: (){
 
-              },
-              isActive: false,
-            ),
-          ],
+                },
+                isActive: false,
+              ),
+            ],
+          ),
+      ]
         ),
       ),
     );
