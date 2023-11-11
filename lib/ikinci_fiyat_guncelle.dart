@@ -20,6 +20,8 @@ void onPressedrefresh() {
 class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -46,13 +48,13 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
           children: [
             Expanded(
               child: ListView.separated(
-                  itemCount: 6,
+                  itemCount: 9,
                   itemBuilder: (context, index) {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(child: SizedBox(width: 1)),
-                        Text("P 1,86 indoor", style: TextStyle(fontSize: 30)),
+                        Text("P 1,86 indoor", style: TextStyle(fontSize: 25)),
                         Flexible(child: SizedBox(width: 80)),
                         Row(
                           children: [
@@ -67,7 +69,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                               onPressed: onPressedrefresh,
                               icon: Icon(
                                 Icons.refresh,
-                                size: 35,
+                                size: 30,
                                 color: buttonActiveColor,
                               ),
                             ),
@@ -78,7 +80,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                       ],
                     );
                   }, separatorBuilder: (BuildContext context, int index) {
-                    return MyDivider() ;
+                    return MyDivider(
+                      indent: 200,
+                      endIndent: 200,
+                    ) ;
               },
               ),
             )

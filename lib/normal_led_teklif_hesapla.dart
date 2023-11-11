@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/component/custom_button.dart';
 import 'package:offer_orange_theme/component/custom_divider.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
@@ -25,11 +26,14 @@ void onTapListtile (){
 
 class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
 
-   final bool customIcon =false;    // ExpansionTile widgettakı duruma göre değişen ikon
+
    final CheckBoxController _ctrl =Get.put(CheckBoxController());
 
   @override
   Widget build(BuildContext context) {
+    //var certainheight = MediaQuery.of(context).size.height;
+    //var certainwidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -48,13 +52,17 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
         ],
         backgroundColor:appbarColor,
         title:Center(
-          child: Text("Normal Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          child: Text("Normal Led Teklif Hesapla",style:GoogleFonts.manrope(
+          fontSize: 25,
+              color: appbarColor,
+              fontWeight: FontWeight.w500,
+          )),
           ),
         ),
-      ),
-      body: Column(
+      body:
+      Column(
         children: [
-          SizedBox(height: 50,),
+          SizedBox(height: 25,),
           Expanded(
               child: ListView(
                 children: [
@@ -63,7 +71,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                       Expanded(
                         child: MyDivider(
                           indent: 350,
-                          endIndent: 40,
+                          endIndent: 10,
                           height: 5,
                           thickness: 0.6,
                         ),
@@ -71,7 +79,49 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                       Text(" Mekan Seçiniz ",style: TextStyle(color: buttonActiveColor),),
                       Expanded(
                         child: MyDivider(
-                          indent: 40,
+                          indent: 10,
+                          endIndent: 350,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      ),
+                      SizedBox(height:70 ,)
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 100),
+                      Placeholder(
+                        fallbackHeight: 100,
+                        fallbackWidth: 100,
+                        color:buttonActiveColor,
+                      ),
+                      Flexible(child: SizedBox(width: 300,)),
+                      Placeholder(
+                        fallbackHeight: 100,
+                        fallbackWidth: 100,
+                        color:buttonActiveColor,
+                      ),
+                      SizedBox(width: 100),
+                    ],
+                  ),
+                  SizedBox(height: 50,),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: MyDivider(
+                          indent: 350,
+                          endIndent: 10,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      ),
+                      Text(" Modül Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Expanded(
+                        child: MyDivider(
+                          indent: 10,
                           endIndent: 350,
                           height: 5,
                           thickness: 0.6,
@@ -79,24 +129,274 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                       )
                     ],
                   ),
+                  SizedBox(height: 50,),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //SizedBox(width: 15),
+                        CustomButton(
+                                txt: "P 1,86",
+                                width: 90,
+                                height: 30,
+                                onPressed: onPressedCustomButton ,
+                                isActive: false,
+                                activebuttonTxtColor: activeButtonTextColor,
+                                passivebuttonTxtColor: passiveButtonTextColor,
+                              ),
+                        SizedBox(width: 1),
+                        CustomButton(
+                          txt: "P 2",
+                          width: 90,
+                          height: 30,
+                          onPressed: onPressedCustomButton ,
+                          isActive: false,
+                          activebuttonTxtColor: activeButtonTextColor,
+                          passivebuttonTxtColor: passiveButtonTextColor,
+                        ),
+                        SizedBox(width: 1),
+                        CustomButton(
+                          txt: "P 2.5",
+                          width: 90,
+                          height: 30,
+                          onPressed: onPressedCustomButton ,
+                          isActive: false,
+                          activebuttonTxtColor: activeButtonTextColor,
+                          passivebuttonTxtColor: passiveButtonTextColor,
+                        ),
+                        SizedBox(width: 1),
+                        CustomButton(
+                          txt: "P 4",
+                          width: 90,
+                          height: 30,
+                          onPressed: onPressedCustomButton ,
+                          isActive: false,
+                          activebuttonTxtColor: activeButtonTextColor,
+                          passivebuttonTxtColor: passiveButtonTextColor,
+                        ),
+                        SizedBox(width: 1),
+                        CustomButton(
+                          txt: "P 5",
+                          width: 90,
+                          height: 30,
+                          onPressed: onPressedCustomButton ,
+                          isActive: false,
+                          activebuttonTxtColor: activeButtonTextColor,
+                          passivebuttonTxtColor: passiveButtonTextColor,
+                        ),
+                       // SizedBox(width: 1),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 50,),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: MyDivider(
+                          indent: 350,
+                          endIndent: 10,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      ),
 
+                      Text(" Boyut Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Expanded(
+                        child: MyDivider(
+                          indent: 10,
+                          endIndent: 350,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      //SizedBox(width: 100,),
-                      Placeholder(
-                        fallbackHeight: 150,
-                        fallbackWidth: 300,
-                        color:buttonActiveColor,
+                      CustomButton(
+                        txt:"Yükseklik : 0",
+                        width: 100,
+                        height: 30,
+                        onPressed: (){
+                          showDialog(
+                            context:context ,
+                            builder:(context){
+                              return AlertDialog(
+                                title: Text("Yükseklik",style:GoogleFonts.manrope(
+                                  fontSize: 25,
+                                  color: appbarColor,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                                content: SizedBox(
+                                  height: 200,
+                                  width: 150,
+                                  child: ListView.builder(
+                                      itemCount: 71,
+                                      itemBuilder:(context ,index){
+                                        return Text("96",style: GoogleFonts.manrope(
+                                          fontSize: 17,
+                                          color: Colors.blueGrey,
+                                          fontWeight: FontWeight.w300,
+                                        ),);
+                                      }),
+                                ),
+                                actions: [
+                                  TextButton(onPressed:() {
+                                   Get.back(); //alert dialog kapansın
+                                  },
+                                    child:Text("go back",style: TextStyle(fontWeight: FontWeight.bold),) ,
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        isActive: false,
                       ),
 
-                      Placeholder(
-                        fallbackHeight: 150,
-                        fallbackWidth: 300,
-                        color:buttonActiveColor,
+                      SizedBox(width: 150),
+                      CustomButton(
+                        txt:"Genişlik : 0",
+                        width: 100,
+                        height: 30,
+                        onPressed: (){
+                          showDialog(
+                            context:context ,
+                            builder:(context){
+                              return AlertDialog(
+                                title: Text("Genişlik",style:GoogleFonts.manrope(
+                                  fontSize: 25,
+                                  color: appbarColor,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                                content: SizedBox(
+                                  height: 200,
+                                  width: 150,
+                                  child: ListView.builder(
+                                    itemCount: 71,
+                                      itemBuilder:(context ,index){
+                                        return Text("96",style: GoogleFonts.manrope(
+                                          fontSize: 17,
+                                          color: Colors.blueGrey,
+                                          fontWeight: FontWeight.w300,
+                                        ),);
+                                      }),
+                                ),
+                                actions: [
+                                  TextButton(onPressed:() {
+                                   Get.back(); //alert dialog kapansın
+                                  },
+                                    child:Text("go back",style: TextStyle(fontWeight: FontWeight.bold),) ,
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        isActive: false,
                       ),
                     ],
                   ),
+                  Obx( () =>
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Checkbox(
+                            activeColor: appbarColor,
+                            tristate: true,
+                            value: _ctrl.checkbool.value,
+                            onChanged:(value){
+                              _ctrl.checkbool.value= !_ctrl.checkbool.value;
+                            },
+                          ),
+                          Text("HDIM",style:GoogleFonts.manrope(
+                            fontSize: 18,
+                            color: appbarColor,
+                            fontWeight: FontWeight.w400,
+                          )
+                          ),
+                        ],
+                      ),
+                  ),
+                  SizedBox(height: 40,),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: MyDivider(
+                          indent: 350,
+                          endIndent: 10,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      ),
+
+                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Expanded(
+                        child: MyDivider(
+                          indent: 10,
+                          endIndent: 350,
+                          height: 5,
+                          thickness: 0.6,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 25,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 1),
+                      CustomButton(
+                        txt: " Vidalı ",
+                        width: 120,
+                        height: 30,
+                        onPressed: onPressedCustomButton ,
+                        isActive: false,
+                        activebuttonTxtColor: activeButtonTextColor,
+                        passivebuttonTxtColor: passiveButtonTextColor,
+                      ),
+                      SizedBox(width: 5),
+                      CustomButton(
+                        txt: " Mıknatıslı ",
+                        width: 120,
+                        height: 30,
+                        onPressed: onPressedCustomButton ,
+                        isActive: false,
+                        activebuttonTxtColor: activeButtonTextColor,
+                        passivebuttonTxtColor: passiveButtonTextColor,
+                      ),
+                      SizedBox(width: 5),
+                      CustomButton(
+                        txt: " MG/Fix",
+                        width: 120,
+                        height: 30,
+                        onPressed: onPressedCustomButton ,
+                        isActive: false,
+                        activebuttonTxtColor: activeButtonTextColor,
+                        passivebuttonTxtColor: passiveButtonTextColor,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomButton(
+                        txt: " Hesapla ",
+                        width: 160,
+                        height: 40,
+                        onPressed: onPressedCustomButton ,
+                        isActive: true,
+                        activebuttonTxtColor: activeButtonTextColor,
+                        passivebuttonTxtColor: passiveButtonTextColor,
+                      ),
+                    ],
+                  ),
+
+
                 ],
               )
           ),
