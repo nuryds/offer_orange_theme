@@ -50,11 +50,11 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
             icon: Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
-        backgroundColor:appbarColor,
+        backgroundColor:primaryColor,
         title:Center(
           child: Text("Normal Led Teklif Hesapla",style:GoogleFonts.manrope(
           fontSize: 25,
-              color: appbarColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
           )),
           ),
@@ -76,7 +76,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Mekan Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Mekan Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -96,13 +96,13 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                       Placeholder(
                         fallbackHeight: 100,
                         fallbackWidth: 100,
-                        color:buttonActiveColor,
+                        color:profileCardColor,
                       ),
                       Flexible(child: SizedBox(width: 300,)),
                       Placeholder(
                         fallbackHeight: 100,
                         fallbackWidth: 100,
-                        color:buttonActiveColor,
+                        color: profileCardColor,
                       ),
                       SizedBox(width: 100),
                     ],
@@ -118,7 +118,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Modül Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Modül Seçiniz ",style: TextStyle(color:primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -142,7 +142,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                                 height: 30,
                                 onPressed: onPressedCustomButton ,
                                 isActive: false,
-                                activebuttonTxtColor: activeButtonTextColor,
+                                activebuttonTxtColor: onPrimaryTextColor,
                                 passivebuttonTxtColor: passiveButtonTextColor,
                               ),
                         SizedBox(width: 1),
@@ -152,7 +152,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -162,7 +162,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -172,7 +172,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -182,7 +182,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor:onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                        // SizedBox(width: 1),
@@ -201,7 +201,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text(" Boyut Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Boyut Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -227,7 +227,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                               return AlertDialog(
                                 title: Text("Yükseklik",style:GoogleFonts.manrope(
                                   fontSize: 25,
-                                  color: appbarColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                 )),
                                 content: SizedBox(
@@ -269,7 +269,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                               return AlertDialog(
                                 title: Text("Genişlik",style:GoogleFonts.manrope(
                                   fontSize: 25,
-                                  color: appbarColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                 )),
                                 content: SizedBox(
@@ -305,7 +305,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Checkbox(
-                            activeColor: appbarColor,
+                            activeColor: primaryColor,
                             tristate: true,
                             value: _ctrl.checkbool.value,
                             onChanged:(value){
@@ -314,7 +314,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           ),
                           Text("HDIM",style:GoogleFonts.manrope(
                             fontSize: 18,
-                            color: appbarColor,
+                            color: primaryColor,
                             fontWeight: FontWeight.w400,
                           )
                           ),
@@ -333,7 +333,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -355,7 +355,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                       SizedBox(width: 5),
@@ -365,7 +365,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                       SizedBox(width: 5),
@@ -375,7 +375,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                     ],
@@ -390,7 +390,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         height: 40,
                         onPressed: onPressedCustomButton ,
                         isActive: true,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                     ],

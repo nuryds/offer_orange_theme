@@ -41,9 +41,9 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
             icon: const Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
-        backgroundColor: appbarColor,
+        backgroundColor: primaryColor,
         title: const Center(
-          child: Text("Kabinli Led Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          child: Text("Kabinli Led Teklif Hesapla",style:TextStyle(color:onPrimaryTextColor,fontWeight: FontWeight.w300),
           ),
         ),
       ),
@@ -63,7 +63,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Mekan Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Mekan Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -83,13 +83,13 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       Placeholder(
                         fallbackHeight: 100,
                         fallbackWidth: 100,
-                        color:buttonActiveColor,
+                        color:profileCardColor,
                       ),
                       Flexible(child: SizedBox(width: 300,)),
                       Placeholder(
                         fallbackHeight: 100,
                         fallbackWidth: 100,
-                        color:buttonActiveColor,
+                        color: profileCardColor,
                       ),
                       SizedBox(width: 100),
                     ],
@@ -105,7 +105,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Modül Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Modül Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -129,7 +129,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -139,7 +139,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -149,7 +149,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -159,7 +159,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor:onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         SizedBox(width: 1),
@@ -169,7 +169,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           height: 30,
                           onPressed: onPressedCustomButton ,
                           isActive: false,
-                          activebuttonTxtColor: activeButtonTextColor,
+                          activebuttonTxtColor: onPrimaryTextColor,
                           passivebuttonTxtColor: passiveButtonTextColor,
                         ),
                         // SizedBox(width: 1),
@@ -188,7 +188,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text(" Boyut Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text(" Boyut Seçiniz ",style: TextStyle(color: primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -214,7 +214,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                               return AlertDialog(
                                 title: Text("Yükseklik",style:GoogleFonts.manrope(
                                   fontSize: 25,
-                                  color: appbarColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                 )),
                                 content: SizedBox(
@@ -256,7 +256,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                               return AlertDialog(
                                 title: Text("Genişlik",style:GoogleFonts.manrope(
                                   fontSize: 25,
-                                  color: appbarColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                 )),
                                 content: SizedBox(
@@ -292,7 +292,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Checkbox(
-                            activeColor: appbarColor,
+                            activeColor:primaryColor,
                             tristate: true,
                             value: _ctrl.checkbool.value,
                             onChanged:(value){
@@ -301,7 +301,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                           ),
                           Text("HDIM",style:GoogleFonts.manrope(
                             fontSize: 18,
-                            color: appbarColor,
+                            color: primaryColor,
                             fontWeight: FontWeight.w400,
                           )
                           ),
@@ -320,7 +320,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color: buttonActiveColor),),
+                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color:primaryColor),),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -342,7 +342,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                       SizedBox(width: 5),
@@ -352,7 +352,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                       SizedBox(width: 5),
@@ -362,7 +362,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         height: 30,
                         onPressed: onPressedCustomButton ,
                         isActive: false,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                     ],
@@ -377,7 +377,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         height: 40,
                         onPressed: onPressedCustomButton ,
                         isActive: true,
-                        activebuttonTxtColor: activeButtonTextColor,
+                        activebuttonTxtColor: onPrimaryTextColor,
                         passivebuttonTxtColor: passiveButtonTextColor,
                       ),
                     ],

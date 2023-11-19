@@ -73,7 +73,7 @@ class CustomTextField extends StatelessWidget {
           onEditingComplete: onEditingComplete,
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            fillColor: Colors.white,
+            fillColor: onPrimaryTextColor,
             filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
@@ -89,7 +89,7 @@ class CustomTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: const BorderSide(
-                color: buttonActiveColor,
+                color: primaryColor,
               ),
             ),
             disabledBorder: OutlineInputBorder(
@@ -100,7 +100,7 @@ class CustomTextField extends StatelessWidget {
             ),
             labelStyle: TextStyle(
               fontSize: labelTextSize,
-              color: buttonActiveColor,
+              color: primaryColor,
               fontWeight: FontWeight.normal,
             ),
             labelText: label,

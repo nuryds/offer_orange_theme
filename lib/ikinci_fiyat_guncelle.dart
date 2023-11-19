@@ -38,7 +38,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
               icon: const Icon(Icons.exit_to_app, color: Colors.white),
             ),
           ],
-          backgroundColor: appbarColor,
+          backgroundColor: primaryColor,
           title: const Text(
             "Fiyat Güncelle",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
@@ -70,7 +70,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                               icon: Icon(
                                 Icons.refresh,
                                 size: 30,
-                                color: buttonActiveColor,
+                                color: primaryColor,
                               ),
                             ),
                           ],

@@ -33,7 +33,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
             icon: const Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
-        backgroundColor: appbarColor,
+        backgroundColor:primaryColor,
         title: const Text("Teklif Hesapla",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
         ),
       ),

@@ -34,7 +34,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             icon: const Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
-        backgroundColor: appbarColor,
+        backgroundColor: primaryColor,
         title: const Center(
           child: Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
           ),
@@ -42,7 +42,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
       ),
       drawer:Drawer(
         clipBehavior: Clip.none,
-        backgroundColor: appbarColor,
+        backgroundColor: primaryColor,
         child: Column(
           children: [
             const SizedBox(height: 220),

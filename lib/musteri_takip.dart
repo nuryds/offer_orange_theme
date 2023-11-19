@@ -30,7 +30,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
             icon: const Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
-        backgroundColor: appbarColor,
+        backgroundColor: primaryColor,
         title: const Center(
           child: Text("Müşteri Takip",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
           ),
