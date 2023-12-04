@@ -78,18 +78,18 @@ class CustomTextField extends StatelessWidget {
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: backgroundColor,
               ),
             ),
             border: OutlineInputBorder(
               borderSide: BorderSide(
-                color:  Colors.grey,
+                color:backgroundColor,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: const BorderSide(
-                color: primaryColor,
+                color:backgroundColor ,
               ),
             ),
             disabledBorder: OutlineInputBorder(
@@ -100,7 +100,7 @@ class CustomTextField extends StatelessWidget {
             ),
             labelStyle: TextStyle(
               fontSize: labelTextSize,
-              color: primaryColor,
+              color:primaryColor ,
               fontWeight: FontWeight.normal,
             ),
             labelText: label,

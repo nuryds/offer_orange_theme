@@ -7,9 +7,7 @@ const onPrimaryTextColor =Color(0xffFFFFFF);
 const secondaryColor = Color(0xffFFA735);
 const onSecondaryTextColor =Color(0xffFFFFFF);
 const profileCardColor =Color(0xffFFFFFF);
-const onProfileCardColor =Color(0xffFFA735);
 const backgroundColor = Color(0xffFAFDFF);
-const onBackgroundColor =Color(0xffF46F2C);
 const passiveButtonTextColor = Colors.black;    // ben ekledim
 // final custombuttonTextcolor =Color(0xffE0F2F1);
 
