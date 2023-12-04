@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 import 'constant/colors.dart';
 // import 'fiyat_guncelle.dart';
@@ -17,7 +19,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
-            //
+            Get.back();
 
           }, icon: const Icon(Icons.arrow_back,color: Colors.white),
 

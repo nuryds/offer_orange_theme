@@ -10,8 +10,8 @@ class CustomButton extends StatelessWidget {
     this.txtSize,
     required this.width,
     required this.height,
-    this.txtColor = profileCardColor,     // appbar color degişti
-    this.activeColor =primaryColor,
+    this.txtColor = primaryColor,     // appbar color degişti
+    this.activeColor = primaryColor,
     this.passiveColor = backgroundColor,
     this.borderRadius,
     this.activebuttonTxtColor,
