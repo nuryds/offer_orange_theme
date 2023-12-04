@@ -20,7 +20,7 @@ class KabinliLedTeklifHesapla extends StatefulWidget {
 
 class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
   final bool customIcon =false;    // ExpansionTile widgettakı duruma göre değişen ikon
-   final CheckBoxController _ctrl  =Get.find();
+   final CheckBoxController _ctrl  =Get.put(CheckBoxController());
 
 
   @override
