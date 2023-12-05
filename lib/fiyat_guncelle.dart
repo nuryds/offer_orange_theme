@@ -6,7 +6,6 @@ import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
 import 'package:offer_orange_theme/musteri_takip.dart';
 import 'package:offer_orange_theme/teklif_hesapla.dart';
 
-
 class FiyatGuncelle extends StatefulWidget {
   const FiyatGuncelle({super.key});
 
@@ -15,32 +14,33 @@ class FiyatGuncelle extends StatefulWidget {
 }
 
 class _FiyatGuncelleState extends State<FiyatGuncelle> {
-
   bool isDrawerOpen = false;
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-  void whenTap(){
-
-  }
+  void whenTap() {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed:(){
+            onPressed: () {
               Get.to(const IkinciFiyatGuncelle());
             },
-            icon: const Icon(Icons.exit_to_app,color: Colors.white),
+            icon: const Icon(Icons.exit_to_app, color: Colors.white),
           ),
         ],
         backgroundColor: primaryColor,
         title: const Center(
-          child: Text("Fiyat Güncelle",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w300),
+          child: Text(
+            "Fiyat Güncelle",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
           ),
         ),
       ),
-      drawer:Drawer(
+      drawer: Drawer(
         clipBehavior: Clip.none,
         backgroundColor: primaryColor,
         child: Column(
@@ -48,34 +48,45 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             const SizedBox(height: 220),
             ListTile(
               leading: const Icon(Icons.settings_backup_restore),
-              title: const Text("Fiyat Güncelle",style: TextStyle(fontSize: 16,color: Colors.white),),
-              onTap: (){
+              title: const Text(
+                "Fiyat Güncelle",
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+              onTap: () {
+                scaffoldKey.currentState!.closeDrawer();
                 Get.to(const IkinciFiyatGuncelle());
               },
             ),
             const SizedBox(height: 17),
             ListTile(
               leading: const Icon(Icons.calculate_rounded),
-              title: const Text("Teklif Hesapla",style: TextStyle(fontSize: 16,color: Colors.white),),
-              onTap: (){
+              title: const Text(
+                "Teklif Hesapla",
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+              onTap: () {
+                scaffoldKey.currentState!.closeDrawer();
                 Get.to(const TeklifHesapla());
               },
             ),
             const SizedBox(height: 17),
             ListTile(
               leading: const Icon(Icons.follow_the_signs),
-              title: const Text("Müşteri Takip",style: TextStyle(fontSize: 16,color: Colors.white),),
-              onTap: (){
+              title: const Text(
+                "Müşteri Takip",
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+              onTap: () {
+                scaffoldKey.currentState!.closeDrawer();
                 Get.to(const MusteriTakip());
               },
             ),
-
           ],
         ),
       ),
       body: Center(
-        child: ListView(
-          children:[ Column(
+        child: ListView(children: [
+          Column(
             children: [
               const SizedBox(height: 75),
               CustomButton(
@@ -83,9 +94,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
                 txt: "Modüller",
                 width: 250,
                 height: 90,
-                onPressed: (){
-
-                },
+                onPressed: () {},
                 isActive: true,
               ),
               CustomButton(
@@ -93,9 +102,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
                 txtSize: 20,
                 width: 250,
                 height: 90,
-                onPressed: (){
-
-                },
+                onPressed: () {},
                 isActive: false,
               ),
               CustomButton(
@@ -103,9 +110,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
                 txtSize: 20,
                 width: 250,
                 height: 90,
-                onPressed:(){
-
-                },
+                onPressed: () {},
                 isActive: false,
               ),
               CustomButton(
@@ -113,15 +118,12 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
                 txt: "Sending-Processors",
                 width: 250,
                 height: 90,
-                onPressed: (){
-
-                },
+                onPressed: () {},
                 isActive: false,
               ),
             ],
           ),
-      ]
-        ),
+        ]),
       ),
     );
   }

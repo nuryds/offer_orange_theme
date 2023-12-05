@@ -27,7 +27,7 @@ void onTapListtile (){
 class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
 
 
-   final CheckBoxController _ctrl =Get.put(CheckBoxController());
+   final CheckBoxController _ctrl = Get.put(CheckBoxController());
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +39,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
         leading: IconButton(
           onPressed: (){
             Get.to( KabinliLedTeklifHesapla());
+
           }, icon:  Icon(Icons.arrow_back,color: Colors.white),
 
         ),
