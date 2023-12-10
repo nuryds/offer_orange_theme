@@ -22,6 +22,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       key: scaffoldKey,
       appBar: AppBar(
         actions: [

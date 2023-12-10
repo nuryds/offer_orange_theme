@@ -3,6 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:offer_orange_theme/component/custom_divider.dart';
 import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
+import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/fiyat_guncelle.dart';
 import 'package:offer_orange_theme/teklif_hesapla.dart';
 
@@ -23,6 +24,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
 
 
     return Scaffold(
+        backgroundColor: backgroundColor,
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -54,7 +56,7 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(child: SizedBox(width: 1)),
-                        Text("P 1,86 indoor", style: TextStyle(fontSize: 25)),
+                        Text("P 1,86 indoor", style: fiyatguncelletext,),
                         Flexible(child: SizedBox(width: 80)),
                         Row(
                           children: [

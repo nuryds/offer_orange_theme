@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/component/custom_button.dart';
 import 'package:offer_orange_theme/component/custom_divider.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
+import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/controller/checkbox_controller.dart';
 import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
+import 'package:offer_orange_theme/8. rental_led_teklif_hesapla.dart';
+import 'package:offer_orange_theme/teklif_hesapla_rental_led.dart';
 
 
 class NormalLedTeklifHesapla extends StatefulWidget {
@@ -35,6 +39,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
     //var certainwidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+        backgroundColor: backgroundColor,
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){
@@ -46,16 +51,16 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
         actions: [
           IconButton(
             onPressed:(){
-              Get.to( KabinliLedTeklifHesapla());
+              Get.to(TeklifHesaplaRentalLed());
             },
             icon: Icon(Icons.exit_to_app,color: Colors.white),
           ),
         ],
         backgroundColor:primaryColor,
         title:Center(
-          child: Text("Normal Led Teklif Hesapla",style:GoogleFonts.manrope(
-          fontSize: 25,
-              color: primaryColor,
+          child: Text("Teklif Hesapla / Normal Led",style:GoogleFonts.manrope(
+          fontSize: 23,
+              color: onPrimaryTextColor,
               fontWeight: FontWeight.w500,
           )),
           ),
@@ -77,7 +82,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Mekan Seçiniz ",style: TextStyle(color: primaryColor),),
+                      Text(" Mekan Seçiniz ",style: dividerarasiyazi),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -99,12 +104,8 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         fallbackWidth: 100,
                         color:profileCardColor,
                       ),
-                      Flexible(child: SizedBox(width: 300,)),
-                      Placeholder(
-                        fallbackHeight: 100,
-                        fallbackWidth: 100,
-                        color: profileCardColor,
-                      ),
+                      Flexible(child: SizedBox(width: 200,)),
+                      //SvgPicture.asset("assets/rectangle16.svg"),
                       SizedBox(width: 100),
                     ],
                   ),
@@ -119,7 +120,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                           thickness: 0.6,
                         ),
                       ),
-                      Text(" Modül Seçiniz ",style: TextStyle(color:primaryColor),),
+                      Text(" Modül Seçiniz ",style: dividerarasiyazi),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -202,7 +203,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text(" Boyut Seçiniz ",style: TextStyle(color: primaryColor),),
+                      Text(" Boyut Seçiniz ",style: dividerarasiyazi),
                       Expanded(
                         child: MyDivider(
                           indent: 10,
@@ -334,7 +335,7 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
                         ),
                       ),
 
-                      Text("Kasa ve Montaj Türü Seçiniz ",style: TextStyle(color: primaryColor),),
+                      Text("Kasa ve Montaj Türü Seçiniz ",style: dividerarasiyazi),
                       Expanded(
                         child: MyDivider(
                           indent: 10,

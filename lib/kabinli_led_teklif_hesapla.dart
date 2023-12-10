@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
+import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/controller/checkbox_controller.dart';
 import 'package:offer_orange_theme/fiyat_guncelle.dart';
 import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
@@ -24,6 +25,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: backgroundColor,
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -34,7 +36,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
           actions: [
             IconButton(
               onPressed: () {
-                Get.to(const IkinciFiyatGuncelle());
+                Get.to(NormalLedTeklifHesapla());
               },
               icon: const Icon(Icons.exit_to_app, color: Colors.white),
             ),
@@ -42,7 +44,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
           backgroundColor: primaryColor,
           title: const Center(
             child: Text(
-              "Kabinli Led Teklif Hesapla",
+              "Teklif Hesapla / Kabinli Led",
               style: TextStyle(color: onPrimaryTextColor, fontWeight: FontWeight.w300),
             ),
           ),
@@ -67,7 +69,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ),
                     Text(
                       " Mekan Seçiniz ",
-                      style: TextStyle(color: primaryColor),
+                      style: dividerarasiyazi,
                     ),
                     Expanded(
                       child: MyDivider(
@@ -118,7 +120,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ),
                     Text(
                       " Modül Seçiniz ",
-                      style: TextStyle(color: primaryColor),
+                      style: dividerarasiyazi,
                     ),
                     Expanded(
                       child: MyDivider(
@@ -207,7 +209,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ),
                     Text(
                       " Boyut Seçiniz ",
-                      style: TextStyle(color: primaryColor),
+                      style: dividerarasiyazi,
                     ),
                     Expanded(
                       child: MyDivider(
@@ -360,7 +362,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ),
                     Text(
                       "Kasa ve Montaj Türü Seçiniz ",
-                      style: TextStyle(color: primaryColor),
+                      style: dividerarasiyazi,
                     ),
                     Expanded(
                       child: MyDivider(

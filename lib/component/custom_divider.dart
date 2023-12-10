@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:offer_orange_theme/constant/colors.dart';
 
 class MyDivider extends StatelessWidget {
   //final double? width ;
@@ -19,8 +20,8 @@ class MyDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Divider(
       height: 10, // Boşluk yüksekliği
-      color: Colors.yellow, // Çizgi rengi
-      thickness: 0.6, // Çizgi kalınlığı
+      color:secondaryColor, // Çizgi rengi
+      thickness: 1, // Çizgi kalınlığı
       indent:indent , // Sol taraf boşluğu
       endIndent:endIndent , // Sağ taraf boşluğu
     );

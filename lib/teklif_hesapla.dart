@@ -4,6 +4,7 @@ import 'package:get/route_manager.dart';
 // import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
+import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
 import 'package:offer_orange_theme/normal_led_teklif_hesapla.dart';
 
 import 'component/custom_button.dart';
@@ -19,6 +20,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -30,7 +32,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(const IkinciFiyatGuncelle());
+              Get.to(const KabinliLedTeklifHesapla());
             },
             icon: const Icon(Icons.exit_to_app, color: Colors.white),
           ),

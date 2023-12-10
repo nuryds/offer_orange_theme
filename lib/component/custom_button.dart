@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     required this.height,
     this.txtColor = primaryColor,     // appbar color degişti
     this.activeColor = primaryColor,
-    this.passiveColor = backgroundColor,
+    this.passiveColor =profileCardColor,
     this.borderRadius,
     this.activebuttonTxtColor,
     this.passivebuttonTxtColor,
@@ -48,7 +48,7 @@ class CustomButton extends StatelessWidget {
           width: width,
           decoration: BoxDecoration(
               color: isActive ? activeColor : passiveColor,
-              borderRadius: borderRadius ?? BorderRadius.circular(6),    // 12 idi 6 yapıldı
+              borderRadius: borderRadius ?? BorderRadius.circular(12),
               border: Border.all(width: 1, color: activeColor)),
           child: Center(
               child: Text(
