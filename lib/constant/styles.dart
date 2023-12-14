@@ -12,7 +12,7 @@ TextStyle tablobaslik = TextStyle(
     );
 
 
-TextStyle appbarbaslik = TextStyle(
+const TextStyle appbarbaslik = TextStyle(
     color: Colors.white,
     fontSize: 24,
     fontFamily: 'Manrope',

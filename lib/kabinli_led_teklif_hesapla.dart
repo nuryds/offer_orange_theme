@@ -275,7 +275,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       },
                       isActive: false,
                     ),
-                    SizedBox(width: 150),
+                    SizedBox(width: 75),
                     CustomButton(
                       txt: "Genişlik : 0",
                       width: 100,
@@ -393,16 +393,6 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     SizedBox(width: 5),
                     CustomButton(
                       txt: " Mıknatıslı ",
-                      width: 120,
-                      height: 30,
-                      onPressed: onPressedCustomButton,
-                      isActive: false,
-                      activebuttonTxtColor: onPrimaryTextColor,
-                      passivebuttonTxtColor: passiveButtonTextColor,
-                    ),
-                    SizedBox(width: 5),
-                    CustomButton(
-                      txt: " MG/Fix",
                       width: 120,
                       height: 30,
                       onPressed: onPressedCustomButton,

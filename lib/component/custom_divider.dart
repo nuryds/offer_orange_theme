@@ -21,7 +21,7 @@ class MyDivider extends StatelessWidget {
     return Divider(
       height: 10, // Boşluk yüksekliği
       color:secondaryColor, // Çizgi rengi
-      thickness: 1, // Çizgi kalınlığı
+      thickness: 0.5, // Çizgi kalınlığı
       indent:indent , // Sol taraf boşluğu
       endIndent:endIndent , // Sağ taraf boşluğu
     );

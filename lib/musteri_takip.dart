@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
@@ -16,6 +17,10 @@ class MusteriTakip extends StatefulWidget {
 class _MusteriTakipState extends State<MusteriTakip> {
   @override
   Widget build(BuildContext context) {
+    double screenwidth = MediaQuery.sizeOf(context).width;
+
+
+
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
@@ -36,11 +41,12 @@ class _MusteriTakipState extends State<MusteriTakip> {
         ],
         backgroundColor: primaryColor,
         title: const Center(
-          child: Text("Müşteri Takip"//,style: appbarbaslik,
+          child: Text("Müşteri Takip",style: appbarbaslik,
           ),
         ),
       ),
-      body: Column(
+      body:screenwidth > 550 ?
+      Column(
         children: [
           SizedBox(height: 40,),
           Padding(
@@ -91,7 +97,8 @@ class _MusteriTakipState extends State<MusteriTakip> {
                                Container(
                                  width: 10,
                                  height: 9,
-                                 child: Image.asset('lib/icons/vector32.svg',color: passiveButtonTextColor),
+                                 child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                                     height: 14),
                                ),
                              ],
                            ),
@@ -106,22 +113,33 @@ class _MusteriTakipState extends State<MusteriTakip> {
                       DataCell(Text("Ledeksanm@gmail.com",style: tablodatayazitipi,),),
                       DataCell(Text("05055550500",style:tablodatayazitipi,),),
                       DataCell(
-                        Container(
-                          child: Center(child: Text("Bekleniyor",style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontFamily: 'Manrope',
-                            fontWeight: FontWeight.w500,
-                            height: 0.11,
-                          ),)),
-                          width: 139,
-                          height: 35,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFC47002),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                        Row(
+                          children: [
+                            Container(
+                              child: Center(child: Text("Bekleniyor",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Manrope',
+                                fontWeight: FontWeight.w500,
+                                height: 0.11,
+                              ),)),
+                              width: 139,
+                              height: 35,
+                              decoration: ShapeDecoration(
+                                color: Color(0xFFC47002),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
-                          ),
+                            SizedBox(width: 10,),
+                            Container(
+                              width: 10,
+                              height: 9,
+                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                                  height: 14),
+                            ),
+                          ],
                         ),
                       ),
                     ]
@@ -134,22 +152,33 @@ class _MusteriTakipState extends State<MusteriTakip> {
                       DataCell(Text("Ledeksanm@gmail.com",style: tablodatayazitipi,),),
                       DataCell(Text("05055550500",style:tablodatayazitipi,),),
                       DataCell(
-                        Container(
-                          child: Center(child: Text("İptal Edildi",style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontFamily: 'Manrope',
-                            fontWeight: FontWeight.w500,
-                            height: 0.11,
-                          ),)),
-                          width: 139,
-                          height: 35,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFC20000),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                        Row(
+                          children: [
+                            Container(
+                              child: Center(child: Text("İptal Edildi",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Manrope',
+                                fontWeight: FontWeight.w500,
+                                height: 0.11,
+                              ),)),
+                              width: 139,
+                              height: 35,
+                              decoration: ShapeDecoration(
+                                color: Color(0xFFC20000),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
-                          ),
+                            SizedBox(width: 10,),
+                            Container(
+                              width: 10,
+                              height: 9,
+                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                                  height: 14),
+                            ),
+                          ],
                         ),
                       ),
                     ]
@@ -159,7 +188,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
             ),
           )
         ],
-      ),
+      ): Text("cep telefonu"),
     );
   }
 }

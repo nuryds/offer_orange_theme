@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       scrollBehavior: MyCustomScrollBehavior(),
-      home: RentalLedTeklifHesaplaTablo(),
+      home: NormalLedTeklifHesapla(),
     );
   }
 }

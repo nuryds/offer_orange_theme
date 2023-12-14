@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/route_manager.dart';
 import 'package:offer_orange_theme/component/custom_button.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
@@ -30,7 +31,11 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             onPressed: () {
               Get.to(const IkinciFiyatGuncelle());
             },
-            icon: const Icon(Icons.exit_to_app, color: Colors.white),
+            icon: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: SvgPicture.asset("assets/icons/ileri_icon.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 26,
+                  height: 23),
+            ),
           ),
         ],
         backgroundColor: primaryColor,
@@ -48,7 +53,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
           children: [
             const SizedBox(height: 220),
             ListTile(
-              leading: const Icon(Icons.settings_backup_restore),
+              leading: SvgPicture.asset("assets/icons/fiyat_guncelle.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Fiyat Güncelle",
                 style: TextStyle(fontSize: 16, color: Colors.white),
@@ -60,7 +65,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             ),
             const SizedBox(height: 17),
             ListTile(
-              leading: const Icon(Icons.calculate_rounded),
+              leading: SvgPicture.asset("assets/icons/teklif_hesapla.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Teklif Hesapla",
                 style: TextStyle(fontSize: 16, color: Colors.white),
@@ -72,7 +77,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             ),
             const SizedBox(height: 17),
             ListTile(
-              leading: const Icon(Icons.follow_the_signs),
+              leading:  SvgPicture.asset("assets/icons/musteri_takip.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Müşteri Takip",
                 style: TextStyle(fontSize: 16, color: Colors.white),
