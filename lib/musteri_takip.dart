@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 
 import 'constant/colors.dart';
@@ -48,7 +47,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
       body:screenwidth > 550 ?
       Column(
         children: [
-          SizedBox(height: 40,),
+          const SizedBox(height: 40,),
           Padding(
             padding: const EdgeInsets.all(50.0),
             child: SingleChildScrollView(
@@ -77,27 +76,27 @@ class _MusteriTakipState extends State<MusteriTakip> {
                            Row(
                              children: [
                                Container(
-                                 child: Center(child: Text("Sipariş verildi",style: TextStyle(
+                                 width: 139,
+                                 height: 35,
+                                 decoration: ShapeDecoration(
+                                   color: const Color(0xFF26C100),
+                                   shape: RoundedRectangleBorder(
+                                     borderRadius: BorderRadius.circular(10),
+                                   ),
+                                 ),
+                                 child: const Center(child: Text("Sipariş verildi",style: TextStyle(
                                    color: Colors.white,
                                    fontSize: 18,
                                    fontFamily: 'Manrope',
                                    fontWeight: FontWeight.w500,
                                    height: 0.11,
                                  ),)),
-                                 width: 139,
-                                 height: 35,
-                                 decoration: ShapeDecoration(
-                                   color: Color(0xFF26C100),
-                                   shape: RoundedRectangleBorder(
-                                     borderRadius: BorderRadius.circular(10),
-                                   ),
-                                 ),
                                ),
-                               SizedBox(width: 10,),
-                               Container(
+                               const SizedBox(width: 10,),
+                               SizedBox(
                                  width: 10,
                                  height: 9,
-                                 child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                                 child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: const ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
                                      height: 14),
                                ),
                              ],
@@ -116,27 +115,27 @@ class _MusteriTakipState extends State<MusteriTakip> {
                         Row(
                           children: [
                             Container(
-                              child: Center(child: Text("Bekleniyor",style: TextStyle(
+                              width: 139,
+                              height: 35,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFFC47002),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              child: const Center(child: Text("Bekleniyor",style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontFamily: 'Manrope',
                                 fontWeight: FontWeight.w500,
                                 height: 0.11,
                               ),)),
-                              width: 139,
-                              height: 35,
-                              decoration: ShapeDecoration(
-                                color: Color(0xFFC47002),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
                             ),
-                            SizedBox(width: 10,),
-                            Container(
+                            const SizedBox(width: 10,),
+                            SizedBox(
                               width: 10,
                               height: 9,
-                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: const ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
                                   height: 14),
                             ),
                           ],
@@ -155,27 +154,27 @@ class _MusteriTakipState extends State<MusteriTakip> {
                         Row(
                           children: [
                             Container(
-                              child: Center(child: Text("İptal Edildi",style: TextStyle(
+                              width: 139,
+                              height: 35,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFFC20000),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              child: const Center(child: Text("İptal Edildi",style:TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontFamily: 'Manrope',
                                 fontWeight: FontWeight.w500,
                                 height: 0.11,
                               ),)),
-                              width: 139,
-                              height: 35,
-                              decoration: ShapeDecoration(
-                                color: Color(0xFFC20000),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
                             ),
-                            SizedBox(width: 10,),
-                            Container(
+                            const SizedBox(width: 10,),
+                            SizedBox(
                               width: 10,
                               height: 9,
-                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
+                              child: SvgPicture.asset("assets/icons/vector32.svg",colorFilter: const ColorFilter.mode(passiveButtonTextColor,BlendMode.srcIn),width: 9,
                                   height: 14),
                             ),
                           ],
@@ -188,7 +187,7 @@ class _MusteriTakipState extends State<MusteriTakip> {
             ),
           )
         ],
-      ): Text("cep telefonu"),
+      ): const Text("cep telefonu"),
     );
   }
 }

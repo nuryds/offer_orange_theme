@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:offer_orange_theme/8. rental_led_teklif_hesapla.dart';
-import 'package:offer_orange_theme/teklif_hesapla.dart';
-import 'package:offer_orange_theme/teklif_hesapla_rental_led.dart';
+//import 'package:offer_orange_theme/teklif_hesapla.dart';
+//import 'package:offer_orange_theme/teklif_hesapla_rental_led.dart';
 
 import 'component/custom_divider.dart';
 import 'component/custom_textfield.dart';
@@ -54,9 +54,9 @@ class _UcuncuFiyatGuncelleState extends State<UcuncuFiyatGuncelle> {
               child: ListView.separated(
                 itemCount: 9,
                 itemBuilder: (context, index) {
-                  return Row(
+                  return const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children:[
                       Expanded(child: SizedBox(width: 1)),
                       Text("P 1,86 indoor", style: TextStyle(fontSize: 25)),
                       Flexible(child: SizedBox(width: 80)),
@@ -84,7 +84,7 @@ class _UcuncuFiyatGuncelleState extends State<UcuncuFiyatGuncelle> {
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
-                  return MyDivider(
+                  return const MyDivider(
                     indent: 200,
                     endIndent: 200,
                   );

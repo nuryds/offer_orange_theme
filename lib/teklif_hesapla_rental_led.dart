@@ -1,19 +1,16 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+//import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/teklif_hesapla.dart';
 import 'package:offer_orange_theme/ucuncu_fiyat_guncelle.dart';
-
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
 import 'constant/colors.dart';
 import 'ikinci_fiyat_guncelle.dart';
-import 'kabinli_led_teklif_hesapla.dart';
 import 'musteri_takip.dart';
-import 'normal_led_teklif_hesapla.dart';
 
 class TeklifHesaplaRentalLed extends StatefulWidget {
   const TeklifHesaplaRentalLed({super.key});
@@ -36,7 +33,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
       key: scaffoldKey,
       appBar: AppBar(
          leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
       onPressed: () {
         scaffoldKey.currentState!.openDrawer();
       },
@@ -105,12 +102,12 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 350,
                     endIndent: 10,
@@ -122,7 +119,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                   " Mekan Seçiniz ",
                   style: dividerarasiyazi,
                 ),
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 10,
                     endIndent: 350,
@@ -130,12 +127,12 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                     thickness: 0.6,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 70,
                 )
               ],
             ),
-            Row(
+            const Row(
               children: [
                 SizedBox(width: 100,),
                 Flexible(
@@ -154,10 +151,10 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                 SizedBox(width: 100,),
               ],
             ),
-            SizedBox(height: 40,),
+            const SizedBox(height: 40,),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 350,
                     endIndent: 10,
@@ -166,7 +163,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                   ),
                 ),
                 Text(" Modül Seçiniz ",style: dividerarasiyazi),
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 10,
                     endIndent: 350,
@@ -176,11 +173,11 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                 )
               ],
             ),
-            SizedBox(height: 25,),
+            const SizedBox(height: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Flexible(child: SizedBox(width: 100,)),
+                const Flexible(child: SizedBox(width: 100,)),
                 Flexible(
                   child: CustomButton(
                       txt: "50×50 / 50×100",txtColor: passiveButtonTextColor,
@@ -190,7 +187,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                       isActive: false,
                   ),
                 ),
-                Flexible(child: SizedBox(width: 50,)),
+                const Flexible(child: SizedBox(width: 50,)),
                 Flexible(
                   child: CustomButton(
                     txt: "50×50 / 50×100",txtColor: passiveButtonTextColor,
@@ -200,13 +197,13 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                     isActive: false,
                   ),
                 ),
-                Flexible(child: SizedBox(width: 100,)),
+                const Flexible(child: SizedBox(width: 100,)),
               ],
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 350,
                     endIndent: 10,
@@ -215,7 +212,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                   ),
                 ),
                 Text(" Modül Adedi /m Seçiniz ",style: dividerarasiyazi),
-                Expanded(
+                const Expanded(
                   child: MyDivider(
                     indent: 10,
                     endIndent: 350,
@@ -225,15 +222,15 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                 )
               ],
             ),
-            SizedBox(height: 10,),
-            Row(
+            const SizedBox(height: 10,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("(Adet veya Alan Giriniz)"),
               ],
             ),
-            SizedBox(height: 25,),
-            Row(
+            const SizedBox(height: 25,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("50×50",style: TextStyle(color: primaryColor),),
@@ -242,7 +239,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(width: 100,),
+                const SizedBox(width: 100,),
                 Flexible(
                   child: CustomButton(
                     txt: "Adet : 2",txtColor: passiveButtonTextColor,
@@ -280,7 +277,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                                 onPressed: () {
                                   //alert dialog kapansın
                                 },
-                                child: Text(
+                                child: const Text(
                                   "go back",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
@@ -293,7 +290,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                     isActive: false,
                   ),
                 ),
-                Text("  /  "),
+                const Text("  /  "),
                 Flexible(
                   child: CustomButton(
                     txt: " m² : 0", txtColor: passiveButtonTextColor,
@@ -331,7 +328,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                                 onPressed: () {
                                   //alert dialog kapansın
                                 },
-                                child: Text(
+                                child: const Text(
                                   "go back",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
@@ -344,11 +341,11 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                     isActive: false,
                   ),
                 ),
-                SizedBox(width: 100,),
+                const SizedBox(width: 100,),
               ],
             ),
-            SizedBox(height: 25,),
-            Row(
+            const SizedBox(height: 25,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("50×50",style: TextStyle(color: primaryColor),),
@@ -395,9 +392,9 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                                 onPressed: () {
                                   //alert dialog kapansın
                                 },
-                                child: Text(
+                                child: const Text(
                                   "go back",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  style:TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ],
@@ -408,7 +405,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                     isActive: false,
                   ),
                 ),
-                Text("  /  "),
+                const Text("  /  "),
                 Flexible(
                   child: CustomButton(
                     txt: " m² : 0",txtColor: passiveButtonTextColor,
@@ -446,7 +443,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                                 onPressed: () {
                                   //alert dialog kapansın
                                 },
-                                child: Text(
+                                child: const Text(
                                   "go back",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
@@ -461,7 +458,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                 ),
               ],
             ),
-            SizedBox(height: 25,),
+            const SizedBox(height: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -470,7 +467,7 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
                   width:120 ,
                   height: 50,
                   onPressed:(){
-                    Get.to(UcuncuFiyatGuncelle());
+                    Get.to(const UcuncuFiyatGuncelle());
                   },
                   isActive:true ,),
               ],

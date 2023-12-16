@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-
-// import 'package:offer_orange_theme/component/custom_textfield.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
-import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
 import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
-import 'package:offer_orange_theme/normal_led_teklif_hesapla.dart';
-
 import 'component/custom_button.dart';
 
 class TeklifHesapla extends StatefulWidget {
@@ -47,7 +42,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
         child: ListView(children: [
           Column(
             children: [
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               CustomButton(
                 txtSize: 20,
                 txt: "Normal Led",
@@ -56,7 +51,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
                 onPressed: () {},
                 isActive: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               CustomButton(
@@ -67,7 +62,7 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
                 onPressed: () {},
                 isActive: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               CustomButton(

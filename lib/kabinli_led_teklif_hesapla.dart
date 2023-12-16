@@ -5,8 +5,6 @@ import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/controller/checkbox_controller.dart';
 import 'package:offer_orange_theme/fiyat_guncelle.dart';
-import 'package:offer_orange_theme/ikinci_fiyat_guncelle.dart';
-
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
 import 'normal_led_teklif_hesapla.dart';
@@ -51,7 +49,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
         ),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Expanded(
@@ -59,7 +57,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
               children: [
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 350,
                         endIndent: 10,
@@ -71,7 +69,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       " Mekan Seçiniz ",
                       style: dividerarasiyazi,
                     ),
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 10,
                         endIndent: 350,
@@ -79,12 +77,12 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         thickness: 0.6,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 70,
                     )
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(width: 100),
@@ -105,12 +103,12 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     SizedBox(width: 100),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 350,
                         endIndent: 10,
@@ -122,7 +120,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       " Modül Seçiniz ",
                       style: dividerarasiyazi,
                     ),
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 10,
                         endIndent: 350,
@@ -132,10 +130,10 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -194,12 +192,12 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 350,
                         endIndent: 10,
@@ -211,8 +209,8 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       " Boyut Seçiniz ",
                       style: dividerarasiyazi,
                     ),
-                    Expanded(
-                      child: MyDivider(
+                    const Expanded(
+                      child:MyDivider(
                         indent: 10,
                         endIndent: 350,
                         height: 5,
@@ -221,7 +219,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -263,7 +261,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                                   onPressed: () {
                                     //alert dialog kapansın
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "go back",
                                     style: TextStyle(fontWeight: FontWeight.bold),
                                   ),
@@ -275,7 +273,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       },
                       isActive: false,
                     ),
-                    SizedBox(width: 75),
+                    const SizedBox(width: 75),
                     CustomButton(
                       txt: "Genişlik : 0",
                       width: 100,
@@ -312,7 +310,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                                   onPressed: () {
                                     //alert dialog kapansın
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "go back",
                                     style: TextStyle(fontWeight: FontWeight.bold),
                                   ),
@@ -347,12 +345,12 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                         )),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 350,
                         endIndent: 10,
@@ -364,7 +362,7 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                       "Kasa ve Montaj Türü Seçiniz ",
                       style: dividerarasiyazi,
                     ),
-                    Expanded(
+                    const Expanded(
                       child: MyDivider(
                         indent: 10,
                         endIndent: 350,
@@ -374,10 +372,10 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(width: 1),
@@ -402,8 +400,8 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     ),
                   ],
                 ),
-                SizedBox(height: 30),
-                Row(
+                const SizedBox(height: 30),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomButton(

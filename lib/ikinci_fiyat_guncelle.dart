@@ -55,10 +55,10 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(child: SizedBox(width: 1)),
+                        const Expanded(child: SizedBox(width: 1)),
                         Text("P 1,86 indoor", style: fiyatguncelletext,),
-                        Flexible(child: SizedBox(width: 80)),
-                        Row(
+                        const Flexible(child:SizedBox(width: 80)),
+                        const Row(
                           children: [
                             Padding(
                               padding: EdgeInsets.only(top: 8),
@@ -77,12 +77,12 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
                             ),
                           ],
                         ),
-                        Expanded(child: SizedBox(width: 1)),
+                        const Expanded(child: SizedBox(width: 1)),
 
                       ],
                     );
                   }, separatorBuilder: (BuildContext context, int index) {
-                    return MyDivider(
+                    return const MyDivider(
                       indent: 200,
                       endIndent: 200,
                     ) ;

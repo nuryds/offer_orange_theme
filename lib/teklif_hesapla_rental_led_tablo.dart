@@ -1,4 +1,3 @@
-import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,7 +5,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/musteri_takip.dart';
-
 import 'constant/colors.dart';
 import 'kabinli_led_teklif_hesapla.dart';
 
@@ -27,16 +25,16 @@ class _RentalLedTeklifHesaplaTabloState
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Get.to(KabinliLedTeklifHesapla());
+            Get.to(const KabinliLedTeklifHesapla());
           },
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(MusteriTakip());
+              Get.to(const MusteriTakip());
             },
-            icon: Icon(Icons.exit_to_app, color: Colors.white),
+            icon: const Icon(Icons.exit_to_app, color: Colors.white),
           ),
         ],
         backgroundColor: primaryColor,
@@ -52,10 +50,10 @@ class _RentalLedTeklifHesaplaTabloState
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -70,7 +68,7 @@ class _RentalLedTeklifHesaplaTabloState
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Row(
@@ -94,7 +92,7 @@ class _RentalLedTeklifHesaplaTabloState
                                 child: DataTable(
                                     border: TableBorder.symmetric(
                                         inside:
-                                            BorderSide(color: Colors.grey)),
+                                            const BorderSide(color: Colors.grey)),
                                     // border: TableBorder.symmetric(outside: BorderSide()),
                                     // border: TableBorder.all(color: Colors.blueGrey,width: 0.5),
                                     sortColumnIndex: 0,
@@ -201,7 +199,7 @@ class _RentalLedTeklifHesaplaTabloState
                                       ]),
                                     ]),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Padding(
@@ -222,19 +220,19 @@ class _RentalLedTeklifHesaplaTabloState
                                   ],
                                 ),
                               ),
-                             Divider(
+                             const Divider(
                                color: Colors.blueGrey,
                                height: 20,
                                thickness: 5,
                                indent: 30,
                                endIndent: 30,
                              ),
-                              SizedBox(height: 10,),
-                              Row(
+                              const SizedBox(height: 10,),
+                              const Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 25),
+                                    padding:EdgeInsets.only(left: 25),
                                     child: Text("Not: Pixel alanı: 112896 , Metrekare:1.00"),
                                   )
                                 ],

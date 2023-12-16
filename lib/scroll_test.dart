@@ -16,7 +16,7 @@ class _ScrollPageState extends State<ScrollPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('New Page')),
+      appBar: AppBar(title: const Text('New Page')),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverMainAxisGroup(slivers: [

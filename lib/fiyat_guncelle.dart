@@ -33,7 +33,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             },
             icon: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: SvgPicture.asset("assets/icons/ileri_icon.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 26,
+              child: SvgPicture.asset("assets/icons/ileri_icon.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 26,
                   height: 23),
             ),
           ),
@@ -53,7 +53,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
           children: [
             const SizedBox(height: 220),
             ListTile(
-              leading: SvgPicture.asset("assets/icons/fiyat_guncelle.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
+              leading: SvgPicture.asset("assets/icons/fiyat_guncelle.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Fiyat Güncelle",
                 style: TextStyle(fontSize: 16, color: Colors.white),
@@ -65,7 +65,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             ),
             const SizedBox(height: 17),
             ListTile(
-              leading: SvgPicture.asset("assets/icons/teklif_hesapla.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
+              leading: SvgPicture.asset("assets/icons/teklif_hesapla.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Teklif Hesapla",
                 style: TextStyle(fontSize: 16, color: Colors.white),
@@ -77,7 +77,7 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
             ),
             const SizedBox(height: 17),
             ListTile(
-              leading:  SvgPicture.asset("assets/icons/musteri_takip.svg",colorFilter: ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
+              leading:  SvgPicture.asset("assets/icons/musteri_takip.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
               title: const Text(
                 "Müşteri Takip",
                 style: TextStyle(fontSize: 16, color: Colors.white),
