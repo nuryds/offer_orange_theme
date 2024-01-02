@@ -1,13 +1,16 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
+import 'package:offer_orange_theme/component/my_drawer.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/controller/checkbox_controller.dart';
-import 'package:offer_orange_theme/fiyat_guncelle.dart';
+import 'package:offer_orange_theme/D1_fiyat_guncelle.dart';
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
-import 'normal_led_teklif_hesapla.dart';
+import 'D4_normal_led_teklif_hesapla.dart';
 
 class KabinliLedTeklifHesapla extends StatefulWidget {
   const KabinliLedTeklifHesapla({super.key});
@@ -24,29 +27,8 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: backgroundColor,
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Get.to(const FiyatGuncelle());
-            },
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Get.to(NormalLedTeklifHesapla());
-              },
-              icon: const Icon(Icons.exit_to_app, color: Colors.white),
-            ),
-          ],
-          backgroundColor: primaryColor,
-          title: const Center(
-            child: Text(
-              "Teklif Hesapla / Kabinli Led",
-              style: TextStyle(color: onPrimaryTextColor, fontWeight: FontWeight.w300),
-            ),
-          ),
-        ),
+        appBar:MyAppbar(baslik: 'Teklif Hesapla/Kabinli Led',),
+        drawer: MyDrawer(),
         body: Column(
           children: [
             const SizedBox(
@@ -82,23 +64,56 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
                     )
                   ],
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(width: 100),
-                    Placeholder(
-                      fallbackHeight: 100,
-                      fallbackWidth: 100,
-                      color: profileCardColor,
+                    SizedBox(width: 100,),
+                    Stack(
+                      children: [
+                        GestureDetector(
+                            onTap: (){
+
+                            },
+                            child: Image.asset("assets/images/ic_mekan.png")),
+                        Positioned(
+                            bottom: 40,
+                            left: 40,
+                            child:AnimatedTextKit(
+                              animatedTexts: [
+                                RotateAnimatedText('İç Mekan',textStyle:const TextStyle( color:passiveButtonTextColor,
+                                  fontSize: 18,
+                                  fontFamily: 'Manrope',
+                                  fontWeight: FontWeight.w700,
+                                  height: 0.09,),
+                                    duration: const Duration(seconds: 10),
+                                    rotateOut: true
+                                )
+                              ],
+                            )
+                        ),
+                      ],
                     ),
-                    Flexible(
-                        child: SizedBox(
-                      width: 300,
-                    )),
-                    Placeholder(
-                      fallbackHeight: 100,
-                      fallbackWidth: 100,
-                      color: profileCardColor,
+                    const Flexible(child: SizedBox(width: 200,)),
+                    Stack(
+                      children: [
+                        Image.asset("assets/images/dis_mekan.png"),
+                        Positioned(
+                          bottom: 65,
+                          left: 40,
+                          child:AnimatedTextKit(
+                            animatedTexts: [
+                              ScaleAnimatedText('Dış Mekan',textStyle:const TextStyle( color: passiveButtonTextColor,
+                                fontSize: 16,
+                                fontFamily: 'Manrope',
+                                fontWeight: FontWeight.w700,
+                                height: 0.09,),
+                                scalingFactor: 2,
+                                duration: const Duration(seconds: 10),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(width: 100),
                   ],

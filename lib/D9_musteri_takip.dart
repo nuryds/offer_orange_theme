@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:offer_orange_theme/component/expansion_list.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
+import 'package:offer_orange_theme/expandable_listwiew2.dart';
 
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
-// import 'fiyat_guncelle.dart';
+// import 'D1_fiyat_guncelle.dart';
 
 class MusteriTakip extends StatefulWidget {
   const MusteriTakip({super.key});
@@ -14,6 +18,7 @@ class MusteriTakip extends StatefulWidget {
 }
 
 class _MusteriTakipState extends State<MusteriTakip> {
+
   @override
   Widget build(BuildContext context) {
     double screenwidth = MediaQuery.sizeOf(context).width;
@@ -22,28 +27,8 @@ class _MusteriTakipState extends State<MusteriTakip> {
 
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){
-            Get.back();
-
-          }, icon: const Icon(Icons.arrow_back,color: Colors.white),
-
-        ),
-        actions: [
-          IconButton(
-            onPressed:(){
-              //
-            },
-            icon: const Icon(Icons.exit_to_app,color: Colors.white),
-          ),
-        ],
-        backgroundColor: primaryColor,
-        title: const Center(
-          child: Text("Müşteri Takip",style: appbarbaslik,
-          ),
-        ),
-      ),
+      appBar: MyAppbar(baslik: 'Müşteri Takip',),
+      drawer: MyDrawer(),
       body:screenwidth > 550 ?
       Column(
         children: [
@@ -187,7 +172,8 @@ class _MusteriTakipState extends State<MusteriTakip> {
             ),
           )
         ],
-      ): const Text("cep telefonu"),
+      ): Expansionpage(),
     );
   }
 }
+

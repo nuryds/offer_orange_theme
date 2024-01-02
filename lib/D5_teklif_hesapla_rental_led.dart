@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 //import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
-import 'package:offer_orange_theme/teklif_hesapla.dart';
+import 'package:offer_orange_theme/D2_teklif_hesapla.dart';
 import 'package:offer_orange_theme/ucuncu_fiyat_guncelle.dart';
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
-import 'ikinci_fiyat_guncelle.dart';
-import 'musteri_takip.dart';
+import 'D6_ikinci_fiyat_guncelle.dart';
+import 'D9_musteri_takip.dart';
 
 class TeklifHesaplaRentalLed extends StatefulWidget {
   const TeklifHesaplaRentalLed({super.key});
@@ -31,74 +33,8 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
     return Scaffold(
       backgroundColor: backgroundColor,
       key: scaffoldKey,
-      appBar: AppBar(
-         leading: IconButton(
-          icon: const Icon(Icons.menu),
-      onPressed: () {
-        scaffoldKey.currentState!.openDrawer();
-      },
-    ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.to(const UcuncuFiyatGuncelle());
-            },
-            icon: const Icon(Icons.exit_to_app, color: Colors.white),
-          ),
-        ],
-        backgroundColor:primaryColor,
-        title:Center(
-          child: Text("Teklif Hesapla / Rental Led",style:GoogleFonts.manrope(
-            fontSize: 23,
-            color: onPrimaryTextColor,
-            fontWeight: FontWeight.w500,
-          )),
-        ),
-      ),
-      drawer: Drawer(
-        clipBehavior: Clip.none,
-        backgroundColor: primaryColor,
-        child: Column(
-          children: [
-            const SizedBox(height: 220),
-            ListTile(
-              leading: const Icon(Icons.settings_backup_restore),
-              title: const Text(
-                "Fiyat Güncelle",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const IkinciFiyatGuncelle());
-              },
-            ),
-            const SizedBox(height: 17),
-            ListTile(
-              leading: const Icon(Icons.calculate_rounded),
-              title: const Text(
-                "Teklif Hesapla",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const TeklifHesapla());
-              },
-            ),
-            const SizedBox(height: 17),
-            ListTile(
-              leading: const Icon(Icons.follow_the_signs),
-              title: const Text(
-                "Müşteri Takip",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const MusteriTakip());
-              },
-            ),
-          ],
-        ),
-      ),
+      appBar:MyAppbar(baslik: 'Teklif Hesapla/Rental Led',),
+      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [

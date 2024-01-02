@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:offer_orange_theme/component/custom_divider.dart';
 import 'package:offer_orange_theme/component/custom_textfield.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
-import 'package:offer_orange_theme/fiyat_guncelle.dart';
-import 'package:offer_orange_theme/teklif_hesapla.dart';
+import 'package:offer_orange_theme/D1_fiyat_guncelle.dart';
+import 'package:offer_orange_theme/D2_teklif_hesapla.dart';
+
+import 'component/my_drawer.dart';
 
 class IkinciFiyatGuncelle extends StatefulWidget {
   const IkinciFiyatGuncelle({super.key});
@@ -25,27 +28,8 @@ class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
 
     return Scaffold(
         backgroundColor: backgroundColor,
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Get.to(const FiyatGuncelle());
-            },
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Get.to(const TeklifHesapla());
-              },
-              icon: const Icon(Icons.exit_to_app, color: Colors.white),
-            ),
-          ],
-          backgroundColor: primaryColor,
-          title: const Text(
-            "Fiyat Güncelle",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
-          ),
-        ),
+        appBar: MyAppbar(baslik: 'Fiyat Güncelle',),
+        drawer: MyDrawer(),
         body: Column(
           children: [
             Expanded(

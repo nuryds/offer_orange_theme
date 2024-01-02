@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
+import 'package:offer_orange_theme/component/my_drawer.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
-import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
+import 'package:offer_orange_theme/D3_kabinli_led_teklif_hesapla.dart';
 import 'component/custom_button.dart';
 
 class TeklifHesapla extends StatefulWidget {
@@ -16,28 +18,8 @@ class _TeklifHesaplaState extends State<TeklifHesapla> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Get.back();
-            Get.back();
-          },
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.to(const KabinliLedTeklifHesapla());
-            },
-            icon: const Icon(Icons.exit_to_app, color: Colors.white),
-          ),
-        ],
-        backgroundColor:primaryColor,
-        title: const Text(
-          "Teklif Hesapla",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
-        ),
-      ),
+      appBar: MyAppbar(baslik: 'Teklif Hesapla',),
+      drawer: MyDrawer(),
       body: Center(
         child: ListView(children: [
           Column(

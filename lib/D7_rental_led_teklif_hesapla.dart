@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
-import 'package:offer_orange_theme/teklif_hesapla_rental_led_tablo.dart';
+import 'package:offer_orange_theme/D8_teklif_hesapla_rental_led_tablo.dart';
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
-import 'kabinli_led_teklif_hesapla.dart';
-import 'normal_led_teklif_hesapla.dart';
+import 'D3_kabinli_led_teklif_hesapla.dart';
+import 'D4_normal_led_teklif_hesapla.dart';
 
 class RentalLedTeklifHesapla extends StatefulWidget {
   const RentalLedTeklifHesapla({super.key});
@@ -23,31 +25,8 @@ class _RentalLedTeklifHesaplaState extends State<RentalLedTeklifHesapla> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){
-            Get.to(KabinliLedTeklifHesapla());
-
-          }, icon: const Icon(Icons.arrow_back,color: Colors.white),
-
-        ),
-        actions: [
-          IconButton(
-            onPressed:(){
-              Get.to( RentalLedTeklifHesaplaTablo());
-            },
-            icon:const Icon(Icons.exit_to_app,color: Colors.white),
-          ),
-        ],
-        backgroundColor:primaryColor,
-        title:Center(
-          child: Text("Teklif Hesapla / Rental Led",style:GoogleFonts.manrope(
-            fontSize: 23,
-            color: onPrimaryTextColor,
-            fontWeight: FontWeight.w500,
-          )),
-        ),
-      ),
+      appBar: MyAppbar(baslik: 'Teklif Hesapla/Rental Led',),
+      drawer: MyDrawer(),
       body: Column(
         children: [
           const SizedBox(

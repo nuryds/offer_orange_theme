@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
-import 'package:offer_orange_theme/musteri_takip.dart';
+import 'package:offer_orange_theme/D9_musteri_takip.dart';
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
-import 'kabinli_led_teklif_hesapla.dart';
+import 'D3_kabinli_led_teklif_hesapla.dart';
 
 class RentalLedTeklifHesaplaTablo extends StatefulWidget {
   const RentalLedTeklifHesaplaTablo({super.key});
@@ -22,31 +24,8 @@ class _RentalLedTeklifHesaplaTabloState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Get.to(const KabinliLedTeklifHesapla());
-          },
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.to(const MusteriTakip());
-            },
-            icon: const Icon(Icons.exit_to_app, color: Colors.white),
-          ),
-        ],
-        backgroundColor: primaryColor,
-        title: Center(
-          child: Text("Teklif Hesapla / Rental Led (Tablo) ",
-              style: GoogleFonts.manrope(
-                fontSize: 23,
-                color: onPrimaryTextColor,
-                fontWeight: FontWeight.w500,
-              )),
-        ),
-      ),
+      appBar: MyAppbar(baslik: 'Teklif Hesapla/Rental Led(Tablo',),
+      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -3,11 +3,14 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:offer_orange_theme/component/custom_button.dart';
 import 'package:offer_orange_theme/component/custom_divider.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 import 'package:offer_orange_theme/constant/colors.dart';
 import 'package:offer_orange_theme/constant/styles.dart';
 import 'package:offer_orange_theme/controller/checkbox_controller.dart';
-import 'package:offer_orange_theme/kabinli_led_teklif_hesapla.dart';
-import 'package:offer_orange_theme/teklif_hesapla_rental_led.dart';
+import 'package:offer_orange_theme/D3_kabinli_led_teklif_hesapla.dart';
+import 'package:offer_orange_theme/D5_teklif_hesapla_rental_led.dart';
+
+import 'component/my_drawer.dart';
 
 
 class NormalLedTeklifHesapla extends StatefulWidget {
@@ -38,31 +41,8 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
 
     return Scaffold(
         backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){
-            Get.to(KabinliLedTeklifHesapla());
-
-          }, icon: const Icon(Icons.arrow_back,color: Colors.white),
-
-        ),
-        actions: [
-          IconButton(
-            onPressed:(){
-              Get.to(TeklifHesaplaRentalLed());
-            },
-            icon:const Icon(Icons.exit_to_app,color: Colors.white),
-          ),
-        ],
-        backgroundColor:primaryColor,
-        title:Center(
-          child: Text("Teklif Hesapla / Normal Led",style:GoogleFonts.manrope(
-          fontSize: 23,
-              color: onPrimaryTextColor,
-              fontWeight: FontWeight.w500,
-          )),
-          ),
-        ),
+      appBar:MyAppbar(baslik: 'Teklif Hesapla/Normal Led',),
+        drawer: MyDrawer(),
       body:
       Column(
         children: [

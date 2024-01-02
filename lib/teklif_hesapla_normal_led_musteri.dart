@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:offer_orange_theme/teklif_hesapla.dart';
+import 'package:offer_orange_theme/D2_teklif_hesapla.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
 
 import 'component/custom_button.dart';
 import 'component/custom_divider.dart';
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
 import 'constant/styles.dart';
 import 'controller/checkbox_controller.dart';
-import 'ikinci_fiyat_guncelle.dart';
-import 'musteri_takip.dart';
-import 'normal_led_teklif_hesapla.dart';
+import 'D6_ikinci_fiyat_guncelle.dart';
+import 'D9_musteri_takip.dart';
+import 'D4_normal_led_teklif_hesapla.dart';
 
 class TeklifHesaplaNormalLedMusteri extends StatefulWidget {
   const TeklifHesaplaNormalLedMusteri({super.key});
@@ -32,71 +34,8 @@ class _TeklifHesaplaNormalLedMusteriState extends State<TeklifHesaplaNormalLedMu
     return Scaffold(
       backgroundColor: backgroundColor,
       key: scaffoldKey,
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {
-              //nereye gidecek
-            },
-            icon: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: SvgPicture.asset("assets/icons/ileri_icon.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 26,
-                  height: 23),
-            ),
-          ),
-        ],
-        backgroundColor: primaryColor,
-        title: const Center(
-          child: Text(
-            "Teklif Hesapla /Normal LED",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
-          ),
-        ),
-      ),
-      drawer: Drawer(
-        clipBehavior: Clip.none,
-        backgroundColor: primaryColor,
-        child: Column(
-          children: [
-            const SizedBox(height: 220),
-            ListTile(
-              leading: SvgPicture.asset("assets/icons/fiyat_guncelle.svg",colorFilter:const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
-              title: const Text(
-                "Fiyat Güncelle",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const IkinciFiyatGuncelle());
-              },
-            ),
-            const SizedBox(height: 17),
-            ListTile(
-              leading: SvgPicture.asset("assets/icons/teklif_hesapla.svg",colorFilter:const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
-              title: const Text(
-                "Teklif Hesapla",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const TeklifHesapla());
-              },
-            ),
-            const SizedBox(height: 17),
-            ListTile(
-              leading:  SvgPicture.asset("assets/icons/musteri_takip.svg",colorFilter:const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 30,height: 30,),
-              title: const Text(
-                "Müşteri Takip",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              onTap: () {
-                scaffoldKey.currentState!.closeDrawer();
-                Get.to(const MusteriTakip());
-              },
-            ),
-          ],
-        ),
-      ),
+      appBar: MyAppbar(baslik: 'Teklif Hesapla/Normal Led',),
+        drawer: MyDrawer(),
       body: Column(
         children: [
           const SizedBox(height: 25,),

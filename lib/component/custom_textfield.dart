@@ -54,9 +54,9 @@ class CustomTextField extends StatelessWidget {
       width: width,
       height: height,
       child: Material(
-        color: Colors.white38,
+        color: Colors.transparent,        //white38 di transparent yapıldı
         //  elevation: 1.0,
-        shadowColor: Colors.grey.shade200,
+        //shadowColor: Colors.grey.shade200,
         child: TextFormField(
           initialValue: initialValue,
           keyboardType: keyboardType,

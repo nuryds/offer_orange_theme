@@ -2,14 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:offer_orange_theme/8. rental_led_teklif_hesapla.dart';
-//import 'package:offer_orange_theme/teklif_hesapla.dart';
-//import 'package:offer_orange_theme/teklif_hesapla_rental_led.dart';
-
+import 'package:offer_orange_theme/D7_rental_led_teklif_hesapla.dart';
+import 'package:offer_orange_theme/component/my_appbar.dart';
+//import 'package:offer_orange_theme/D2_teklif_hesapla.dart';
+//import 'package:offer_orange_theme/D5_teklif_hesapla_rental_led.dart';
 import 'component/custom_divider.dart';
 import 'component/custom_textfield.dart';
+import 'component/my_drawer.dart';
 import 'constant/colors.dart';
-import 'fiyat_guncelle.dart';
+import 'D1_fiyat_guncelle.dart';
 
 class UcuncuFiyatGuncelle extends StatefulWidget {
   const UcuncuFiyatGuncelle({super.key});
@@ -27,27 +28,8 @@ class _UcuncuFiyatGuncelleState extends State<UcuncuFiyatGuncelle> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: backgroundColor,
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Get.to(const FiyatGuncelle());
-            },
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Get.to(const RentalLedTeklifHesapla());
-              },
-              icon: const Icon(Icons.exit_to_app, color: Colors.white),
-            ),
-          ],
-          backgroundColor: primaryColor,
-          title: const Text(
-            "Fiyat Güncelle",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
-          ),
-        ),
+        appBar: MyAppbar(baslik: 'Teklif Hesapla',),
+        drawer: MyDrawer(),
         body: Column(
           children: [
             Expanded(
