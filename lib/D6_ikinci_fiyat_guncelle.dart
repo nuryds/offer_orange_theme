@@ -22,13 +22,14 @@ void onPressedrefresh() {
 }
 
 class _IkinciFiyatGuncelleState extends State<IkinciFiyatGuncelle> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
+        key: scaffoldKey,
         backgroundColor: backgroundColor,
-        appBar: MyAppbar(baslik: 'Fiyat Güncelle',),
+        appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Fiyat Güncelle',),
         drawer: MyDrawer(),
         body: Column(
           children: [

@@ -34,14 +34,13 @@ class _NormalLedTeklifHesaplaState extends State<NormalLedTeklifHesapla> {
 
    final CheckBoxController _ctrl = Get.put(CheckBoxController());
 
-  @override
-  Widget build(BuildContext context) {
-    //var certainheight = MediaQuery.of(context).size.height;
-    //var certainwidth = MediaQuery.of(context).size.width;
-
-    return Scaffold(
-        backgroundColor: backgroundColor,
-      appBar:MyAppbar(baslik: 'Teklif Hesapla/Normal Led',),
+   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+         key: scaffoldKey,
+         backgroundColor: backgroundColor,
+         appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Teklif Hesapla/Normal Led',),
         drawer: MyDrawer(),
       body:
       Column(

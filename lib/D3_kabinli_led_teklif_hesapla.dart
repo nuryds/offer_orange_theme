@@ -23,11 +23,15 @@ class _KabinliLedTeklifHesaplaState extends State<KabinliLedTeklifHesapla> {
   final bool customIcon = false; // ExpansionTile widgettakı duruma göre değişen ikon
   final CheckBoxController _ctrl = Get.put(CheckBoxController());
 
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: scaffoldKey,
         backgroundColor: backgroundColor,
-        appBar:MyAppbar(baslik: 'Teklif Hesapla/Kabinli Led',),
+        appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Teklif Hesapla/Kabinli Led',),
         drawer: MyDrawer(),
         body: Column(
           children: [

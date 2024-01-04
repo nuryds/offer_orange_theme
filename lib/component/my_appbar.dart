@@ -10,17 +10,19 @@ import '../constant/colors.dart';
 
 class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String baslik;
+  final GlobalKey<ScaffoldState> scaffoldKey;
 
   MyAppbar({
     super.key,
-  required this.baslik,
+    required this.baslik,
+    required this.scaffoldKey,
   });
 
   bool isDrawerOpen = false;
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Size get preferredSize => Size.fromHeight(58.0);
+
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
@@ -36,21 +38,20 @@ class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
           },
           icon: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: SvgPicture.asset("assets/icons/ileri_icon.svg",colorFilter: const ColorFilter.mode(profileCardColor,BlendMode.srcIn),width: 26,
-                height: 23),
+            child: SvgPicture.asset("assets/icons/ileri_icon.svg",
+                colorFilter: const ColorFilter.mode(profileCardColor, BlendMode.srcIn), width: 26, height: 23),
           ),
         ),
       ],
       backgroundColor: primaryColor,
       title: Center(
-        child: Text(
-          baslik,
-          style: GoogleFonts.manrope(
-            fontSize: 23,
-            color: onPrimaryTextColor,
-            fontWeight: FontWeight.w500,
-          )),
-        ),
-      );
+        child: Text(baslik,
+            style: GoogleFonts.manrope(
+              fontSize: 23,
+              color: onPrimaryTextColor,
+              fontWeight: FontWeight.w500,
+            )),
+      ),
+    );
   }
 }

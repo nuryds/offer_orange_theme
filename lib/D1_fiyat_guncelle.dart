@@ -27,8 +27,11 @@ class _FiyatGuncelleState extends State<FiyatGuncelle> {
     return Scaffold(
       backgroundColor: backgroundColor,
       key: scaffoldKey,
-      appBar: MyAppbar(baslik:'Fiyat Güncelle',),
-      drawer:MyDrawer(),
+      appBar: MyAppbar(
+        baslik: 'Fiyat Güncelle',
+        scaffoldKey: scaffoldKey,
+      ),
+      drawer: MyDrawer(),
       body: Center(
         child: ListView(children: [
           Column(

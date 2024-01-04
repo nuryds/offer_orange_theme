@@ -20,11 +20,15 @@ class RentalLedTeklifHesaplaTablo extends StatefulWidget {
 
 class _RentalLedTeklifHesaplaTabloState
     extends State<RentalLedTeklifHesaplaTablo> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       backgroundColor: backgroundColor,
-      appBar: MyAppbar(baslik: 'Teklif Hesapla/Rental Led(Tablo',),
+      appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Teklif Hesapla/Rental Led(Tablo',),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(

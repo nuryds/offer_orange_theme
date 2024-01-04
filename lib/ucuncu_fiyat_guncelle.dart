@@ -24,11 +24,15 @@ void onPressedrefresh() {
 }
 
 class _UcuncuFiyatGuncelleState extends State<UcuncuFiyatGuncelle> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: scaffoldKey,
         backgroundColor: backgroundColor,
-        appBar: MyAppbar(baslik: 'Teklif Hesapla',),
+        appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Teklif Hesapla',),
         drawer: MyDrawer(),
         body: Column(
           children: [

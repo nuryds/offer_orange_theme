@@ -34,7 +34,7 @@ class _TeklifHesaplaNormalLedMusteriState extends State<TeklifHesaplaNormalLedMu
     return Scaffold(
       backgroundColor: backgroundColor,
       key: scaffoldKey,
-      appBar: MyAppbar(baslik: 'Teklif Hesapla/Normal Led',),
+      appBar: MyAppbar(scaffoldKey:scaffoldKey,baslik: 'Teklif Hesapla/Normal Led',),
         drawer: MyDrawer(),
       body: Column(
         children: [

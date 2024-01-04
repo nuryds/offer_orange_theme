@@ -28,12 +28,13 @@ class _TeklifHesaplaRentalLedState extends State<TeklifHesaplaRentalLed> {
    }
    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor,
-      key: scaffoldKey,
-      appBar:MyAppbar(baslik: 'Teklif Hesapla/Rental Led',),
+
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+       key: scaffoldKey,
+       backgroundColor: backgroundColor,
+       appBar: MyAppbar(scaffoldKey: scaffoldKey,baslik: 'Teklif Hesapla/Rental Led',),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(
